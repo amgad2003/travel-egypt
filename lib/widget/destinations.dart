@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
 class Destinations extends StatelessWidget {
-  const Destinations({super.key});
-
+  const Destinations({super.key, required this.text1,required this.text2});
+  final String? text1;
+  final String? text2;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,14 +12,14 @@ class Destinations extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-                'Destinations',
+                text1!,
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold
                 )
             ),
             Text(
-                'All Date',
+                text2!,
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
